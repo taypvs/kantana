@@ -33,11 +33,18 @@
           <i class="fa fa-files-o"></i> <span>Team</span>
         </a>
       </li>
-      <li class="active">
-        <a href="">
-          <i class="fa fa-files-o"></i> <span>Career</span>
-        </a>
-      </li>
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share"></i> <span>Career</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" class="active">
+            <li><a href="admincareer"><i class="fa fa-circle-o" class="active"></i>Recruitment</a></li>
+            <li><a href="adminapplication"><i class="fa fa-circle-o"></i>Application</a></li>
+          </ul>
+        </li>
     </ul>
   </section>
   <!-- /.sidebar -->

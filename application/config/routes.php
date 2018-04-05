@@ -64,6 +64,7 @@ $route['adminmaster'] = 'adminMaster';
 $route['adminlogin'] = 'adminloginMaster';
 $route['admincareer'] = 'adminCareerMaster';
 $route['admincareeritem'] = 'adminCareerItemMaster';
+$route['adminapplication'] = 'adminCareerApplicationMaster';
 
 
 //User
