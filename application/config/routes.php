@@ -61,10 +61,12 @@ $route['departmentmaster'] = 'departmentMaster';
 $route['productmaster'] = 'productMaster';
 $route['estimationlist'] = 'estimationList';
 $route['adminmaster'] = 'adminMaster';
-$route['adminlogin'] = 'adminloginMaster';
+$route['adminlogin'] = 'adminloginMaster'; // Admin Login
 $route['admincareer'] = 'adminCareerMaster';
 $route['admincareeritem'] = 'adminCareerItemMaster';
 $route['adminapplication'] = 'adminCareerApplicationMaster';
+$route['adminapplicationitem'] = 'adminCareerApplicationItemMaster';
+$route['adminapplicationitem/download'] = 'adminCareerApplicationItemMaster/download';
 
 
 //User

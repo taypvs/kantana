@@ -60,9 +60,13 @@ class CareerList extends MY_Controller{
       "active" => 1,
     );
 
-    if(move_uploaded_file($tmp_name, APPPATH.'files/cv/'.$filename)){
+
+    $uploadfile = $_SERVER['DOCUMENT_ROOT'] . '/files/cv/'.$filename;
+    if(move_uploaded_file($tmp_name, $uploadfile)){
 			$this->Musercareerapplication->insertNewApplication($data_insert);
 		}
+    // echo base_url('/files/cv/'.$filename);
+    // echo $uploadfile;
 
     $this->session->set_flashdata($this->_flash_mess, "Thank you for your applying! We will contact you soon");
 

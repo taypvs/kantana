@@ -60,8 +60,8 @@ $route['customermaster'] = 'customerMaster';
 $route['departmentmaster'] = 'departmentMaster';
 $route['productmaster'] = 'productMaster';
 $route['estimationlist'] = 'estimationList';
-$route['adminmaster'] = 'adminMaster';
-$route['adminlogin'] = 'adminloginMaster';
+$route['adminmaster'] = 'adminMaster'; // Admin Index
+$route['adminlogin'] = 'adminloginMaster'; // Admin Login 
 $route['admincareer'] = 'adminCareerMaster';
 $route['admincareeritem'] = 'adminCareerItemMaster';
 

@@ -67,7 +67,7 @@
                   echo '<td><span class="label '.$class.'">'.$status.'</span></td>';
                   echo "<td>";
                   echo "<div class='btn-group'>";
-                  echo '<a href="'.base_url().'admincareeritem?id='.$cipherID.'"><button type="button" class="btn btn-info">View</button></a>';
+                  echo '<a href="'.base_url().'adminapplicationitem?id='.$cipherID.'"><button type="button" class="btn btn-info">View</button></a>';
                   echo "</div>";
                   echo "</td>";
                   echo "</tr>";

@@ -23,25 +23,23 @@
 
           <?php
           $title = '';
-          $typeFullTime = '';
-          $typePartTime = '';
-          $location = '';
-          $maxSalary = '';
-          $minSalary = '';
-          $startDate = '';
-          $endDate = '';
-          $isActive = '';
+          $cvFile = '';
+          $cvLink = '';
+          $portfolioLink = '';
+          $availableDate = '';
+          $referencesFrom = '';
+          $postDate = '';
+          $status = '';
 
-          if(isset($career)){
-            $title = $career['title'];
-            $location = $career['location'];
-            $typeFullTime = $career['type'] == 'Full Time' ? 'checked' : '';
-            $typePartTime = $career['type'] == 'Part Time' ? 'checked' : '';
-            $maxSalary = $career['salary_max'];
-            $minSalary = $career['salary_min'];
-            $startDate = date("m/d/Y", strtotime($career['start_date']));
-            $endDate = date("m/d/Y", strtotime($career['close_date']));
-            $isActive = $career['active'];
+          if(isset($application)){
+            $title = $application['title'];
+            $cvFile = $application['cv_file'];
+            $cvLink = $application['cv_link'];
+            $portfolioLink = $application['portfolio_link'];
+            $availableDate = $application['start_date'];
+            $referencesFrom = $application['references_from'];
+            $postDate = $application['post_date'];
+            $status = $application['status'];
           }
           ?>
 
@@ -52,30 +50,25 @@
             <!-- ==== GENERAL ITEM ====== -->
             <div class="box box-primary">
               <div class="box-header with-border">
-                <h3 class="box-title">Create New Career Item</h3>
+                <h3 class="box-title">Cadidate Application Item</h3>
               </div>
               <!-- /.box-header -->
               <div class="box-body">
                 <!-- text input -->
                 <div class="form-group">
-                  <label>Title</label>
-                  <input type="text" class="form-control" placeholder="Job Position ..." name="title" value="<?php echo $title;?>">
+                  <label>Job Title</label>
+                  <input type="text" class="form-control" placeholder="Job Position ..." name="title" value="<?php echo $title;?>"  disabled />
                 </div>
 
                 <!-- radio -->
                 <div class="form-group">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="optionTypeCareer" id="optionsRadios1" value="Full Time" <?php echo $typeFullTime;?>>
-                      Full Time
-                    </label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="optionTypeCareer" id="optionsRadios2" value="Part Time" <?php echo $typePartTime;?>>
-                      Part Time
-                    </label>
-                  </div>
+                  <label>
+                    CV File
+                  </label>
+                  <?php
+                  $cipherFile = encrypted($cvFile);
+                  ?>
+                  <a href="adminapplicationitem/download?id=<?php echo $cipherFile; ?>" ><?php echo $cvFile; ?></a>
                 </div>
 
                 <div class="form-group" id="selectLocation">
